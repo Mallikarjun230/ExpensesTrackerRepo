@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="https://localhost.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2a_96_HpqErhf_-7Yn0KKf5Ni3eu_AfjZA&usqp=CAU">
+<style>
+	#d1
+		{
+		height: 80px;
+		background-color: deeppink;
+		border-bottom: black 4px solid;
+	   }
+	   #logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin-left: 50px;
+		margin-top: 20px;
+		float: left;
+		}
+		body{
+		
+		display: contents;
+		overflow: hidden;
+		
+	}
+	#icon{
+		margin-right: 50px;
+		margin-top: 35px;
+		float: right;
+		font-size: 20px;
+		
+	}
+	#d2{
+		width: 100%;
+		height: 85.9vh;
+		background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		justify-content: center;
+		text-align: center;
+		margin-top: 0px;
+	
+	}
+	#d3{
+		width: 600px;
+		height: 300px;
+		background-color: aqua;
+		box-shadow: 5px 5px 8px black;
+		border: 4px groove red;
+		background: transparent;
+		
+	}
+	#d3:hover
+	{
+		width: 610px;
+		height: 310px;
+		background-color: aqua;
+		box-shadow: 5px 5px 8px black;
+		border: 4px groove red;
+		background: transparent;
+		
+	}
+	.ip{
+		width: 300px;
+		height: 30px;
+		margin-top: -10px;
+		border-radius: 6px;
+		border-style: none;
+		background: linear-gradient( 45deg,pink,skyblue);
+		text-align: center;
+		font-style: oblique;
+	}
+	#date{
+		margin-left: 25px;
+	}
+	#btn{
+		width: 150px;
+		height: 30px;
+		border-radius: 15px;
+		background-color: lawngreen;
+		font-size: 10px;
+	}
+	#btn:hover
+	{
+		width: 150px;
+		height: 30px;
+		border-radius: 15px;
+		background: linear-gradient(45deg,pink,blue,red)
+	}
+	#footer
+	{
+		margin-top: 0%;
+		text-align: center;
+		background-color: silver;
+		height: 20px;
+		font-size: 15px;
+	}
+	
+</style>
+</head>
+<body>
+	<form th:action="@{/filter/{userid} (userid=${session.User.id})}" th:unless="session == null">
+	<div id="d1">
+	  <a th:href="@{/welcome}"><i class="fa  fa-house-user" id="icon"></i></a> 
+		 <img src="https://w7.pngwing.com/pngs/417/38/png-transparent-expense-management-finance-budget-android-thumbnail.png" id="logo"><br>
+		 <h2>Expenses Tracker</h2>
+	</div>
+	<div id="d2">
+		<center>
+			<br><br><br><br>
+		<div id="d3">
+		<br>
+		<h2 style="letter-spacing: 7px; font-style: oblique;">Filter Expenses</h2>
+		<label>Select Date:</label>
+		<input type="date" class="ip" id="date" name="date"><br><br>
+		<label>Select category: </label>
+		<input type="text"   placeholder="category" class="ip" list="categories" name="category"><br><br>
+		<datalist id="categories">
+				<option>Utilities</option>
+				<option>Transportation</option>
+				<option>Groceries</option>
+				<option>Dining Out</option>
+				<option>Health Care</option>
+				<option>Entertainment</option>
+				<option>Personal Care</option>
+				<option>Education</option>
+				<option>clothing</option>
+				<option>Home Maintenance</option>
+				<option>Gifts & Donations</option>
+				<option>Savings and Investment</option>
+				<option>Tax</option>
+				<option>Others</option>
+			</datalist>
+		<label>Select Amount: </label>
+		<input type="text" value = "0" placeholder="Amount" name="range" class="ip" list="money" style="background-color: black;color: red;"><br><br>
+		<datalist id="money">
+				<option>100-1000</option>
+				<option>1000-3000</option>
+				<option>3000-5000</option>
+				<option>5000-10000</option>
+				<option>10000-100000</option>
+		</datalist>
+		<input type="submit" value="Submit" id="btn">
+		</div>
+		</center>
+		
+	</div>
+	</form>
+	<footer id="footer"> &COPY; 2023 Mallikarjun. All Rights Reserved</footer>
+</body>
+</html>

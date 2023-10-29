@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="https://localhost.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Expenses Tracker</title>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2a_96_HpqErhf_-7Yn0KKf5Ni3eu_AfjZA&usqp=CAU">
+<style>
+	#img{
+		width: 300px;
+		height: 300px;
+		float: left;
+		margin-left: 300px;
+		margin-top: 80px;
+		
+	}
+	#logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	#icon{
+		float: right;
+		width: 50px;
+		height: 50px;
+		margin-right: 20px;
+		margin-top: 20px;
+		font-size: 30px;
+		outline: 0px;
+		border: white;
+	}
+	#par{
+		width: 550px;
+		height: 250px;
+		margin-top: 80px;
+		margin-right: 300px;
+		float: right;
+		text-align: justify;
+		font-size: 20px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-style: italic;
+		padding-top: 50px;
+		color: black;
+		
+		
+	}
+	
+	#footer
+	{
+		margin-top: 0%;
+		text-align: center;
+		background-color: silver;
+		height: 25px;
+		font-size: 15px;
+	}
+	#d1{
+		background-color: deeppink;
+		border-bottom: black 4px solid;
+		
+		
+	}
+	body{
+		
+		display: contents;
+		
+		
+	}
+	#d2{
+		width: 100%;
+		height: 86vh;
+		background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	@keyframes color
+	{
+		0%{
+			background-color: 0 50%;
+		}
+		50%{
+			background-color: 100% 50%;
+		}
+		100%{
+			background-color: 0 50%;
+		}
+		
+	}
+</style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+   </head>
+   <body>
+	<form th:action="@{/home}">
+	<div id="d1"> 
+	 <img src="https://w7.pngwing.com/pngs/417/38/png-transparent-expense-management-finance-budget-android-thumbnail.png" id="logo">Expenses Tracker
+	 
+	 <a th:href="@{/login}"><i class="fa fa-user" id="icon"></i></a>
+   </div>
+  
+  <div id="d2">
+	<img src="https://media1.giphy.com/media/FAEEL82CUc1JPBas1V/giphy.gif?cid=ecf05e475t87t6fywwz80itdx6999wha8pbcfzr602k5kmpe&ep=v1_gifs_related&rid=giphy.gif&ct=g" id="img">
+	<p id="par">Expenses Tracker simplify your personal reimbursement management.<br>
+	  Expenses tracker is used to record their daily routine expenses in a digital and hassls-free way as opposed to the conventinal manjual documents of expenses
+	</p>
+  </div>
+	</form>
+	
+	
+	
+<footer id="footer"> &COPY; 2023 Mallikarjun. All Rights Reserved</footer>
+</body>
+</html>

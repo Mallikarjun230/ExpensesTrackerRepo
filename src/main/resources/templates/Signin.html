@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="https://localhost.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign in</title>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2a_96_HpqErhf_-7Yn0KKf5Ni3eu_AfjZA&usqp=CAU">
+<style>
+	#logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin-left: 50px;
+		margin-top: 20px;
+		
+	}
+	#d1{
+		background-color: deeppink;
+		border-bottom: black 4px solid;
+		margin-bottom: -1.6%;
+	}
+	#footer
+	{
+		margin-top: 0%;
+		text-align: center;
+		background-color: silver;
+		height: 25px;
+		font-size: 15px;
+	}
+	body{
+		background-image: radial-gradient( silver,yellow);
+		display: contents;
+	}
+	#d2{
+		width: 100%;
+		height: 86vh;
+		background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	
+	.ip{
+		width: 400px;
+		height: 30px;
+		border-radius: 10px;
+		text-align: center;
+		border-style: none;
+	}
+	#btn{
+		width: 400px;
+		height: 30px;
+		border-radius: 10px;
+	}
+	.ip:hover{
+		width: 400px;
+		height: 30px;
+		border-radius: 10px;
+		background-color: aqua;
+		border: 4px greenyellow groove;
+	}
+	#btn:hover{
+		width: 400px;
+		height: 30px;
+		border-radius: 10px;
+		background-color: green;
+		border: 4px solid red;
+	}
+	
+	
+</style>
+</head>
+<body>
+<form th:action="@{/register}" method="post">
+<div id="d1">
+	<img src="https://w7.pngwing.com/pngs/417/38/png-transparent-expense-management-finance-budget-android-thumbnail.png" id="logo">Expenses Tracker
+</div>
+<center>
+<div id="d2">
+	
+	
+	<h1  style="color:lightgreen">Create Account</h1>
+	<input type="text" placeholder="Enter FullName" class="ip" name="fullName"><br><br>
+	<input type="text" placeholder="Enter User Name" class="ip" name="userName"><br><br>
+	<input type="email" placeholder="Enter Email" class="ip" name="email"><br><br>
+	<input type="text" placeholder="Enter Mobile" class="ip" name="mobile"><br><br>
+	<input type="password" placeholder="Enter  password" class="ip" name="password"><br><br>
+	<input type="password" placeholder="Repeat Your password" class="ip" name="repassword"><br><br>
+	<input type="submit" value="Signin" id="btn">
+	<h3 style="color: lawngreen;">Already Have Account</h3><a th:href="@{/login}" style="color: red; font-size: 20px;">Login</a>
+
+</div>
+	<h1 th:text="${msg}"></h1>
+
+</center>
+</form>
+<footer id="footer"> &COPY; 2023 Mallikarjun. All Rights Reserved</footer>
+</body>
+</html>

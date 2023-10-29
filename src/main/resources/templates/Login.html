@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="https://localhost.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ExpensesTracker</title>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP2a_96_HpqErhf_-7Yn0KKf5Ni3eu_AfjZA&usqp=CAU">
+</head>
+<style>
+	body{
+		
+		display: contents;
+		
+	}
+	#d1{
+		height: 80px;
+		background-color: deeppink;
+		border-bottom: black 4px solid;
+		margin-bottom: -1.6%;
+	}
+	#d2{
+		margin-top: 0%;
+		width: 100%;
+		height: 85.3vh;
+		background-image: url('https://images.saymedia-content.com/.image/t_share/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.jpg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		
+	}
+	#logo{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		margin-left: 50px;
+		margin-top: 20px;
+		float: left;
+		
+		
+	}
+	
+	#footer
+	{
+		margin-top: 0%;
+		text-align: center;
+		background-color: silver;
+		height: 25px;
+		font-size: 15px;
+	}
+	#fblogo{
+		    width: 180px;
+		    height: 50px;
+		
+	    }
+	    #google{
+			 width: 180px;
+		    height: 50px;
+		}
+		.ip{
+			width: 400px;
+			height: 40px;
+			text-align: center;
+			border-radius: 5px;
+			border-style: none;
+		
+		}
+		.btn{
+			width: 100px;
+			height: 50px;
+			border-radius: 30px;
+		}
+		.ip:hover{
+			width: 390px;
+			height: 45px;
+			border: 2px solid cornflowerblue;
+			border-radius: 10px;
+		}
+		.btn:hover{
+			width: 100px;
+			height: 50px;
+			border-radius: 30px;
+			background-color:deepskyblue;
+		}
+		
+</style>
+<body >
+
+	<form th:action="@{/loginOperation}" method="post">
+	<div id="d1">
+		 <img src="https://w7.pngwing.com/pngs/417/38/png-transparent-expense-management-finance-budget-android-thumbnail.png" id="logo"><br>
+		 <h2>Expenses Tracker</h2>
+	</div>
+	 <center>
+	<div id="d2">
+		
+	<h1>Sign in with</h1>
+		<button style="width: 200px;height: 50px;"><a href="https://www.facebook.com/" style="color: blue;">Facebook</a></button>
+		<button style="width: 200px;height: 50px;" ><a href="https://accounts.google.com/" style="color: forestgreen;">Google</a></button>
+		<br>
+		<br>
+		
+		<input type="text" placeholder="Enter userName" class="ip" name="userName"><br><br>
+		<input type="password" placeholder="Enter Password" class="ip" name="password"><br>
+		
+		<a th:href="@{/forgotpassword}"  style="color: ghostwhite; margin-left: -280px;margin-top: 10px;">ForgotPassword?</a>
+		<br><br>
+		
+		<button class="btn"><a style="text-decoration: none;">Login</a></button>
+		&nbsp;&nbsp;&nbsp;
+		<input type="reset" value="cancel" class="btn">
+		<br><br>
+		don't Have any account &nbsp; &nbsp;<a th:href="@{/signin}" style="color: red;">sign up now</a>
+		
+		
+			
+	</form> 
+	<h1 style="color: white;" th:text="${msg}"></h1>
+	
+	</div>
+	</center>
+<footer id="footer"> &COPY; 2023 Mallikarjun. All Rights Reserved</footer>
+</body>
+</html>
